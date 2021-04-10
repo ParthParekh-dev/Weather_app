@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/utilities/constants.dart';
+import 'package:intl/intl.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -12,59 +13,79 @@ class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Enter City'),
+        backgroundColor: int.parse(DateFormat('H').format(DateTime.now())) > 12
+            ? kNightAppbar
+            : kDayAppbar,
+      ),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/city_background.jpg'),
-            fit: BoxFit.cover,
-          ),
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: int.parse(DateFormat('H').format(DateTime.now())) > 12
+                  ? kNightTheme
+                  : kDayTheme),
         ),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
-            children: <Widget>[
-              Align(
-                alignment: Alignment.topLeft,
-                child: FlatButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                flex: 4,
+                child: Align(
+                  alignment: Alignment.bottomCenter,
                   child: Icon(
-                    Icons.arrow_back_ios,
-                    size: 50.0,
+                    Icons.ac_unit_outlined,
+                    size: 120,
                   ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(20.0),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                  ),
-                  onChanged: (value) {
-                    city_name = value;
-                  },
-                  decoration: InputDecoration(
-                    filled: true,
-                    prefixIcon: Icon(
-                      Icons.location_city,
-                      color: Colors.blue,
+              Expanded(
+                flex: 6,
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        TextField(
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                          ),
+                          onChanged: (value) {
+                            city_name = value;
+                          },
+                          decoration: InputDecoration(
+                            filled: true,
+                            prefixIcon: Icon(
+                              Icons.location_city,
+                              color: Colors.deepPurple,
+                            ),
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        RawMaterialButton(
+                          fillColor: Colors.deepPurple,
+                          onPressed: () {
+                            Navigator.pop(context, city_name);
+                          },
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Text('Get Weather'),
+                        ),
+                      ],
                     ),
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
                   ),
-                ),
-              ),
-              FlatButton(
-                onPressed: () {
-                  Navigator.pop(context, city_name);
-                },
-                child: Text(
-                  'Get Weather',
-                  style: kButtonTextStyle,
                 ),
               ),
             ],

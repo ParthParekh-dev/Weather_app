@@ -6,8 +6,8 @@ const kTempTextStyle = TextStyle(
 );
 
 const kMessageTextStyle = TextStyle(
-  fontFamily: 'Spartan MB',
-  fontSize: 60.0,
+  fontFamily: 'Mina',
+  fontSize: 50.0,
 );
 
 const kButtonTextStyle = TextStyle(
@@ -16,5 +16,11 @@ const kButtonTextStyle = TextStyle(
 );
 
 const kConditionTextStyle = TextStyle(
-  fontSize: 100.0,
+  fontSize: 120.0,
 );
+
+const List<Color> kDayTheme = [Color(0xFF1579EF), Color(0xFF78E9FB)];
+const List<Color> kNightTheme = [Color(0xFF031B42), Color(0xFF415D8B)];
+
+const Color kDayAppbar = Color(0xFF1579EF);
+const Color kNightAppbar = Color(0xFF031B42);

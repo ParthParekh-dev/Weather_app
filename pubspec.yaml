@@ -31,6 +31,7 @@ dependencies:
   geolocator: ^7.0.1
   http: ^0.13.1
   flutter_spinkit: ^4.1.2
+  intl: ^0.16.0
 
 dev_dependencies:
   flutter_test:
@@ -67,7 +68,15 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Mina
+      fonts:
+        - asset: fonts/Mina-Bold.ttf
+    - family: Mina-Regular
+      fonts:
+        - asset: fonts/Mina-Regular.ttf
+
+
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
