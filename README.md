@@ -1,7 +1,7 @@
 # Flutter Weather App
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/81976919/114070172-5b200c80-98bd-11eb-83f0-efcc59c07a9b.png" width="48%" />
-  <img src="https://user-images.githubusercontent.com/81976919/114070243-6d01af80-98bd-11eb-9518-58257c025e20.png" width="48%" />
+  <img src="https://user-images.githubusercontent.com/81976919/114294651-ac96ea00-9abd-11eb-8632-7aacfb4f675e.png" width="48%" />
+  <img src="https://user-images.githubusercontent.com/81976919/114294669-c0425080-9abd-11eb-838f-9c818ae9bdf0.png" width="48%" />
 </p>
 Know the current location weather and any city weather using Open Weather API (https://openweathermap.org/api)
 
