@@ -60,7 +60,8 @@ class _LocationScreenState extends State<LocationScreen> {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: int.parse(DateFormat('H').format(DateTime.now())) > 12
+              colors: int.parse(DateFormat('H').format(DateTime.now())) > 18 ||
+                      int.parse(DateFormat('H').format(DateTime.now())) < 6
                   ? kNightTheme
                   : kDayTheme),
         ),
@@ -124,7 +125,7 @@ class _LocationScreenState extends State<LocationScreen> {
                       day + '\n' + fullDate,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Mina-Regular',
+                        fontFamily: 'Raleway-Medium',
                         fontSize: 50.0,
                       ),
                     ),

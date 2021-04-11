@@ -15,16 +15,19 @@ class _CityScreenState extends State<CityScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Enter City'),
-        backgroundColor: int.parse(DateFormat('H').format(DateTime.now())) > 12
-            ? kNightAppbar
-            : kDayAppbar,
+        backgroundColor:
+            int.parse(DateFormat('H').format(DateTime.now())) > 18 ||
+                    int.parse(DateFormat('H').format(DateTime.now())) < 6
+                ? kNightAppbar
+                : kDayAppbar,
       ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: int.parse(DateFormat('H').format(DateTime.now())) > 12
+              colors: int.parse(DateFormat('H').format(DateTime.now())) > 18 ||
+                      int.parse(DateFormat('H').format(DateTime.now())) < 6
                   ? kNightTheme
                   : kDayTheme),
         ),

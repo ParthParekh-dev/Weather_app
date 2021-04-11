@@ -75,6 +75,15 @@ flutter:
     - family: Mina-Regular
       fonts:
         - asset: fonts/Mina-Regular.ttf
+    - family: Raleway-Regular
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf
+    - family: Raleway-Thin
+      fonts:
+        - asset: fonts/Raleway-Thin.ttf
+    - family: Raleway-Medium
+      fonts:
+        - asset: fonts/Raleway-Medium.ttf
 
 
   #   - family: Schyler

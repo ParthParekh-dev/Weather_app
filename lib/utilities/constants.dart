@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 const kTempTextStyle = TextStyle(
-  fontFamily: 'Spartan MB',
+  fontFamily: 'Raleway-Thin',
   fontSize: 100.0,
 );
 
 const kMessageTextStyle = TextStyle(
-  fontFamily: 'Mina',
+  fontFamily: 'Raleway-Regular',
   fontSize: 50.0,
 );
 
