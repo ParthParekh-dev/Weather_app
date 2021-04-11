@@ -1,5 +1,6 @@
 # Flutter Weather App
 Day and Night UI theme as per the current location of the user.
+Know the current location weather or city weather using Open Weather API (https://openweathermap.org/api)
 <p float="left">
   <img src="https://user-images.githubusercontent.com/81976919/114294651-ac96ea00-9abd-11eb-8632-7aacfb4f675e.png" width="30%" />
   <img src="https://user-images.githubusercontent.com/81976919/114294669-c0425080-9abd-11eb-838f-9c818ae9bdf0.png" width="30%" />
